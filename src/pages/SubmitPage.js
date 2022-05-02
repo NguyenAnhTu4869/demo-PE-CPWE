@@ -200,7 +200,7 @@ const SubmitPage = (props) => {
     /** Fetch Department Data */
     let dataDepartment = {
         searchKey: userInfo.userRole !== "ADMIN" ? userInfo.departmentName : null,
-        limit: 5,
+        limit: 100,
         page: 1,
         sortBy: null,
         sortType: null,
@@ -212,7 +212,7 @@ const SubmitPage = (props) => {
     /** Fetch Topic Data */
     let dataTopic = {
         searchKey: null,
-        limit: 5,
+        limit: 100,
         page: 1,
         sortBy: null,
         sortType: null,
@@ -230,7 +230,7 @@ const SubmitPage = (props) => {
     /** Fetch Category/Tag Data */
     let dataCategory = {
         searchKey: null,
-        limit: 5,
+        limit: 100,
         page: 1,
         sortBy: null,
         sortType: null,
