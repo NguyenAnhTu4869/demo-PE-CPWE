@@ -1,0 +1,34 @@
+//Abstracts
+@import './Abstracts/variable';
+//Base
+@import './Base/animations';
+@import './Base/base';
+@import './Base/typography';
+//Components
+@import './Components/button';
+@import './Components/label';
+@import './Components/card';
+@import './Components/form';
+@import './Components/dropdown';
+@import './Components/modal';
+@import './Components/resetMui';
+@import './Components/message';
+@import './Components/table';
+@import './Components/userCard';
+@import './Components/comments';
+//Layouts
+@import './Layout/nav';
+@import './Layout/header';
+@import './Layout/footer';
+//Pages
+@import './Pages/home';
+@import './Pages/login';
+@import './Pages/register';
+@import './Pages/submit';
+@import './Pages/terms';
+@import './Pages/department';
+@import './Pages/manageUser';
+@import './Pages/ideaDetail';
+@import './Pages/dashboard';
+//webpack
+@import "~react-image-gallery/styles/scss/image-gallery.scss";

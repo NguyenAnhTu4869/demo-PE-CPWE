@@ -1,0 +1,173 @@
+.NavbarItems {
+    background: $color-red-24;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 3px 0px 12px 0px $color-black-40;
+}
+
+.navbar-logo {
+    padding: 30px 92px;
+    overflow: hidden;
+    background-image: url("../../asset/logo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 4px;
+}
+
+.fa-react {
+    margin-left: 0.1rem;
+    font-size: 4rem;
+}
+
+.fa-bars {
+    padding-top: 15%;
+    font-size: 3rem;
+    color: $color-white-DF;
+}
+
+.fa-times {
+    padding-top: 0%;
+    font-size: 35px;
+    padding-right: 3px;
+    color: $color-white-DF;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-gap: 2.5rem;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: flex-start;
+    padding-left: 2.5rem;
+
+    & li.nav-items {
+        height: 60px;
+        padding-top: 1rem;
+    }
+
+    .btn--create--idea {
+        padding-top: 1rem;
+        padding-left: 3rem;
+
+        .btn--medium {
+            color: $color-black;
+            background: $color-yellow-00;
+            font-weight: 600;
+        }
+    }
+}
+
+.nav-link {
+    color: $color-white-FA;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    background-color: $color-yellow-00;
+    color: $color-black;
+    border-radius: 6px;
+    transition: all 0.2s ease-out;
+}
+
+.nav-link-mobile {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 1130px) {
+    .NavbarItems {
+        position: relative;
+    }
+
+    .nav-menu {
+        grid-gap: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        margin: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        background: $color-red-24;
+        padding: 0;
+        left: 0;
+        top: 6rem;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 3;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-link:hover {
+        background-color: $color-yellow-00;
+        color: $color-black;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        top: 0px;
+        margin: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: -1rem;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .nav-link-mobile {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 80%;
+        color: $color-black;
+        background: $color-yellow-00;
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        &.user-card {
+            background: $color-green-btn-account-mobile;
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+
+    .btn.btn--primary,
+    .btn--user--info,
+    .greeting-message,
+    #user-avatar-navbar,
+    #transition-popper,
+    .MuiButton-root {
+        display: none !important;
+    }
+}
