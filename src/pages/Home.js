@@ -185,6 +185,7 @@ function Home() {
     const [categoryFilter, setCategoryFilter] = useState(null);
     const [sortTable, setSortTable] = useState(1);
     const departmentId = useSelector((state) => state.user.userInfo.departmentId);
+    const userRole = useSelector((state) => state.user.userInfo.userRole)
 
     var tableDatas = {
         searchKey: null,
@@ -200,7 +201,7 @@ function Home() {
     useEffect(() => {
         if (isLoading) {
             console.log(departmentId)
-            handleGet(null, setReturnData, setPagination, departmentId);
+            handleGet(null, setReturnData, setPagination, userRole === "ADMIN" ? null : departmentId);
             getSemester(null, setSemesterOption);
             getDepartment(null, setDepartmentOption);
             getTopic(null, setTopicOption);
@@ -210,7 +211,7 @@ function Home() {
     }, [isLoading]);
 
     useEffect(() => {
-        handleGet(tableDatas, setReturnData, setPagination, departmentId);
+        handleGet(tableDatas, setReturnData, setPagination, userRole === "ADMIN" ? null : departmentId);
     }, [
         departmentFilter,
         semesterFilter,
